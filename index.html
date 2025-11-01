@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perereca Fit Salon - Seu Estilo, Sua Energia!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* [ ... ESTILOS CSS ANTERIORES ... ] */
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F8F8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 5%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 0;
+            transition: color 0.3s, border-bottom 0.3s;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: #FFD700;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            /* MANTIDO COM IMAGEM PLACEHOLDER NO CSS. SE QUISER MUDAR, COLOQUE A URL AQUI. */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1500x600/388E3C/FFFFFF?text=IMAGEM+DE+FUNDO+SAL%C3%83O+MODERNO');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #333;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #FFA500;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .section h3 {
+            font-size: 2.2em;
+            color: #4CAF50;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #FFD700;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* NOVO ESTILO PARA A GALERIA DE SERVIÇOS */
+        .services-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Garante que a imagem fique dentro do card */
+            width: calc(33% - 20px); /* 3 itens por linha em telas grandes */
+            min-width: 300px;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px; /* Altura fixa para as imagens */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+        }
+
+        .gallery-content {
+            padding: 15px 20px;
+        }
+
+        .gallery-content h4 {
+            color: #388E3C;
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #CCCCCC;
+            text-align: center;
+            padding: 30px 5%;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            nav ul {
+                padding-top: 10px;
+                flex-wrap: wrap;
+            }
+            nav ul li {
+                margin: 5px 10px;
+            }
+            .hero {
+                height: 350px;
+            }
+            .hero h2 {
+                font-size: 2.5em;
+            }
+            .gallery-item {
+                width: 95%; /* Ocupa quase a largura total no celular */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PERERECA FIT SALON</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#promocao">Promoções</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" class="btn-primary" style="margin: 0; padding: 5px 15px; background-color: white; color: #4CAF50;">Agendar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero" id="inicio">
+        <h2>Seu Estilo, Sua Energia!</h2>
+        <p>Transformação e bem-estar no único **Perereca Fit Salon**.</p>
+        <a href="#servicos" class="btn-primary">Ver Galeria de Serviços</a>
+    </div>
+
+    <div class="section" id="servicos">
+        <h3>🖼️ Nossos Serviços em Destaque</h3>
+        
+        <div class="services-gallery">
+            
+            <div class="gallery-item">
+                <img src="cabelo1.jpg" alt="Foto de Cabelo Moderno">
+                <div class="gallery-content">
+                    <h4>Corte e Coloração</h4>
+                    <p>Técnicas modernas para o corte e coloração que realçam sua personalidade. Produtos naturais e de alta performance.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="unha1.jpg" alt="Foto de Manicure e Unhas">
+                <div class="gallery-content">
+                    <h4>Manicure e Pedicure Fit</h4>
+                    <p>Unhas impecáveis, designs criativos e duradouros, com foco em esmaltes veganos e tratamentos fortalecedores.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="sobrancelhas.jpg" alt="Foto de Sobrancelhas Perfeitas">
+                <div class="gallery-content">
+                    <h4>Design de Sobrancelhas</h4>
+                    <p>Modelagem personalizada para harmonizar com seu rosto e técnicas avançadas como microblading para um olhar marcante.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="cabelo2.jpg" alt="Outra Foto de Penteado">
+                <div class="gallery-content">
+                    <h4>Penteados e Tratamentos</h4>
+                    <p>Hidratações profundas, reconstrução capilar e penteados para festas, formaturas e eventos especiais.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="unha2.jpg" alt="Outra Foto de Unhas">
+                <div class="gallery-content">
+                    <h4>Alongamento de Unhas</h4>
+                    <p>Gel, fibra ou acrílico. Garanta unhas longas e resistentes com acabamento profissional e natural.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="sobran2.jpg" alt="Outra Foto de Sobrancelhas">
+                <div class="gallery-content">
+                    <h4>Micropigmentação e Henna</h4>
+                    <p>Soluções de preenchimento para falhas e definição da forma da sobrancelha, realçando a beleza natural dos seus olhos.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section" id="promocao" style="background-color: #EEEEEE;">
+        <h3>🔥 Super Promoção da Semana</h3>
+        <p style="font-size: 1.2em; font-weight: 600; color: #388E3C;">
+            Na compra de um Corte + Tratamento Capilar, ganhe **50% de desconto** na Massagem Relaxante!
+        </p>
+        <a href="#" class="btn-primary">Aproveitar Oferta!</a>
+    </div>
+    
+    <div class="section" id="contato">
+        <h3>📍 Onde Nos Encontrar</h3>
+        <p>Estamos prontos para te receber! Agende seu horário e venha nos visitar.</p>
+        
+        <div style="margin-top: 30px; font-size: 1.1em;">
+            <p><strong>Endereço:</strong> Rua do Baile da Gaiola da Precheca, S/N</p>
+            <p><strong>Telefone para Contato:</strong> **4002-8922**</p>
+            <p><strong>Horário:</strong> Segunda a Sábado, das 9h às 19h</p>
+            <p style="margin-top: 20px;">Siga-nos nas redes sociais para ver nossos últimos trabalhos!</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Perereca Fit Salon. Seu estilo, sua energia!</p>
+        <p>Desenvolvido com 💚 e muito estilo.</p>
+    </footer>
+
+</body>
+</html>
