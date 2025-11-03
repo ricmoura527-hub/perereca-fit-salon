@@ -54,7 +54,7 @@
         }
 
         nav ul li a {
-            color: #333; /* Opções em cor escura (melhor legibilidade) */
+            color: #333; /* Opções em cor escura */
             text-decoration: none;
             font-weight: 600;
             padding: 5px 0;
@@ -205,36 +205,62 @@
         }
 
         @media (max-width: 768px) {
-            /* 1. CABEÇALHO: Ajuste vertical e menu de rolagem */
+            
+            /* 1. CABEÇALHO: Stack vertical e menu de rolagem */
             header {
                 flex-direction: column;
-                padding: 10px 2%;
+                padding: 10px 1%; /* Reduz padding para dar mais espaço */
+                align-items: flex-start; /* Alinha o logo à esquerda */
             }
-            nav ul {
-                overflow-x: auto;
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                margin-top: 5px;
+
+            header .logo {
+                margin-bottom: 5px;
+            }
+
+            /* NAVEGAÇÃO SUPER COMPACTA E SCROLL HORIZONTAL */
+            nav {
+                width: 100%;
+                overflow-x: auto; /* Permite rolar o menu horizontalmente */
+                -webkit-overflow-scrolling: touch;
                 padding-bottom: 5px;
             }
-            nav ul li {
-                flex-shrink: 0;
-                margin: 0 8px;
-            }
-
-            /* 2. HERO */
-            .hero {
-                height: 400px;
-            }
-            .hero h2 {
-                font-size: 3em;
-            }
-
-            /* 3. GALERIA (Celular) */
-            .services-gallery {
-                grid-template-columns: 1fr; /* 1 coluna no celular (empilhamento) */
+            
+            nav ul {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                margin-top: 0;
             }
             
+            nav ul li {
+                flex-shrink: 0; /* Impede que os itens fiquem muito apertados */
+                margin: 0 10px 0 0;
+            }
+            
+            /* Ajuste o botão de agendar no celular para aparecer no canto */
+            nav ul li a.btn-primary {
+                margin-right: 15px;
+            }
+
+
+            /* 2. HERO (Banner) */
+            .hero {
+                height: 350px; /* Um pouco menor no celular */
+            }
+            .hero h2 {
+                font-size: 2.5em; /* Reduz tamanho da fonte */
+            }
+            .hero p {
+                font-size: 1.2em;
+                padding: 0 10px;
+            }
+
+            /* 3. GALERIA (Celular: 1 COLUNA) - Empilhamento Perfeito */
+            .services-gallery {
+                grid-template-columns: 1fr; /* Força 1 coluna no celular */
+                gap: 20px;
+            }
+            
+            /* 4. SEÇÕES GERAIS */
             .section {
                 padding: 40px 3%;
             }
