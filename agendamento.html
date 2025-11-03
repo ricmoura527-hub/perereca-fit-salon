@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Perereca Fit Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFCCCC; /* Fundo Rosa Pastel */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .agendamento-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .agendamento-box h2 {
+            color: #FF69B4; /* Pink Vibrante */
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .agendamento-box p {
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25D366; /* Verde WhatsApp */
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1DA855;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            color: #FF69B4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="agendamento-box">
+        <h2>💖 Agendamento Rápido</h2>
+        <p>Preencha seus dados para finalizarmos o agendamento via WhatsApp!</p>
+        
+        <form id="whatsapp-form">
+            <div class="form-group">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="whatsapp">Seu WhatsApp (apenas números):</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Ex: 5511987654321" required>
+            </div>
+            
+            <button type="submit" class="btn-whatsapp">
+                Mandar Mensagem no WhatsApp
+            </button>
+        </form>
+
+        <a href="index.html" class="back-link">← Voltar para a Galeria de Serviços</a>
+    </div>
+
+    <script>
+        document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            
+            // Mensagem de agendamento
+            const mensagem = `Olá, meu nome é ${nome} e gostaria de agendar um serviço que vi no site Perereca Fit Salon! Meu contato é ${whatsapp}.`;
+            
+            // O número do salão (40028922) deve ter o código do país (55) e o DDD (ex: 11)
+            // Vou usar o número do salão que você forneceu: 40028922. 
+            // POR FAVOR, ALTERE O NÚMERO ABAIXO PARA INCLUIR O CÓDIGO DO PAÍS (55) E O DDD CORRETO.
+            const numeroSalao = "551140028922"; // Exemplo com DDD 11. AJUSTE ISSO!
+
+            const url = `https://wa.me/${numeroSalao}?text=${encodeURIComponent(mensagem)}`;
+            
+            window.open(url, '_blank');
+        });
+    </script>
+
+</body>
+</html>
