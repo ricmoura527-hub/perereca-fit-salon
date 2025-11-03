@@ -23,7 +23,7 @@
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            width: 90%;
+            width: 90%; /* Ajusta para 90% da tela */
             max-width: 400px;
             text-align: center;
         }
@@ -122,10 +122,12 @@
             // Mensagem de agendamento
             const mensagem = `Olá, meu nome é ${nome} e gostaria de agendar um serviço que vi no site Perereca Fit Salon! Meu contato é ${whatsapp}.`;
             
-            // O número do salão (40028922) deve ter o código do país (55) e o DDD (ex: 11)
-            // Vou usar o número do salão que você forneceu: 40028922. 
-            // POR FAVOR, ALTERE O NÚMERO ABAIXO PARA INCLUIR O CÓDIGO DO PAÍS (55) E O DDD CORRETO.
-            const numeroSalao = "551140028922"; // Exemplo com DDD 11. AJUSTE ISSO!
+            // ######################################################################
+            // (55)21996948277
+        
+            const numeroSalao = "5521996948277"; // Exemplo com DDD 11.
+            // ######################################################################
+
 
             const url = `https://wa.me/${numeroSalao}?text=${encodeURIComponent(mensagem)}`;
             
