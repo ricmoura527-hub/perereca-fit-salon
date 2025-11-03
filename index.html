@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perereca Fit Salon - Estilo Rosa Chic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Perereca Fit Salon | Premium Beauty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* RESET E FONTES */
+        /* ====================== RESET E TIPOGRAFIA ====================== */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FFF0F5; /* Fundo Branco Suave */
+            background-color: #FFF0F5; /* Fundo Rosa Suave */
             color: #333;
             line-height: 1.6;
         }
 
-        /* CABEÇALHO SOFISTICADO (Rosa Claro) */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #D84F99; /* Pink Escuro para Títulos */
+        }
+
+        /* ====================== CABEÇALHO FIXO ====================== */
         header {
-            background-color: #FFB6C1; /* Rosa Claro/Pastel */
-            color: white;
+            background-color: white; /* Header Branco e Limpo */
             padding: 15px 5%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -33,11 +37,11 @@
         header .logo {
             font-size: 1.8em;
             font-weight: 700;
-            letter-spacing: 1px;
-            color: #333; /* Texto em preto para contraste */
+            letter-spacing: 2px;
+            color: #FF69B4; /* Logo em Pink */
         }
 
-        /* NAVEGAÇÃO CHIC (Opções Brancas e Destaque) */
+        /* NAVEGAÇÃO SUPERIOR */
         nav ul {
             list-style: none;
             padding: 0;
@@ -50,41 +54,28 @@
         }
 
         nav ul li a {
-            color: white; /* Opções BRANCAS */
+            color: #333; /* Opções em cor escura (melhor legibilidade) */
             text-decoration: none;
             font-weight: 600;
-            padding: 8px 0;
-            transition: color 0.3s, border-bottom 0.3s;
-            position: relative;
-        }
-        
-        /* Efeito Underline Bonito em Rosa Destaque */
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -5px;
-            left: 0;
-            background-color: #FF69B4; /* Pink Vibrante */
-            transition: width 0.3s ease-in-out;
+            padding: 5px 0;
+            transition: color 0.3s;
         }
 
-        nav ul li a:hover::after {
-            width: 100%;
+        nav ul li a:hover {
+            color: #FF69B4; /* Pink no hover */
         }
         
-        /* BOTÃO DE AÇÃO ROBUSTO */
+        /* BOTÃO DE AÇÃO PREMIUM */
         .btn-primary {
             display: inline-block;
             background-color: #FF69B4; /* Pink Vibrante */
             color: white;
             padding: 12px 30px;
             text-decoration: none;
-            font-weight: 700;
-            border-radius: 50px;
+            font-weight: 600;
+            border-radius: 5px;
             margin-top: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4); /* Sombra rosa */
             transition: background-color 0.3s, transform 0.2s;
         }
 
@@ -93,12 +84,12 @@
             transform: translateY(-2px);
         }
 
-        /* SEÇÃO DE BANNER/DESTAQUE */
+        /* ====================== SEÇÃO HERO (Banner) ====================== */
         .hero {
-            background: linear-gradient(rgba(255, 182, 193, 0.6), rgba(255, 182, 193, 0.6)), url('https://via.placeholder.com/1500x600/FFB6C1/FFFFFF?text=BANNER+ROSA+CHIC');
+            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('https://via.placeholder.com/1500x600/FFB6C1/FFFFFF?text=IMAGEM+DE+LUXO+SALAO');
             background-size: cover;
             background-position: center;
-            height: 500px;
+            height: 600px; /* Mais alto */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -108,151 +99,145 @@
         }
 
         .hero h2 {
-            font-size: 3.5em;
+            font-size: 4em; /* Título maior */
             margin: 0;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+            color: #D84F99;
+            letter-spacing: 2px;
         }
 
         .hero p {
-            font-size: 1.5em;
+            font-size: 1.6em;
             margin-top: 10px;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            color: #555;
         }
 
-        /* SEÇÕES DE CONTEÚDO */
+        /* ====================== SEÇÕES DE CONTEÚDO ====================== */
         .section {
-            padding: 60px 5%;
+            padding: 80px 5%; /* Mais padding */
             text-align: center;
         }
 
         .section h3 {
-            font-size: 2.2em;
-            color: #FF69B4; /* Títulos em Pink Vibrante */
-            margin-bottom: 40px;
-            border-bottom: 3px solid #FFB6C1;
-            display: inline-block;
+            font-size: 2.8em; /* Título mais elegante */
+            margin-bottom: 50px;
             padding-bottom: 5px;
+            position: relative;
         }
-
-        /* GALERIA DE SERVIÇOS */
+        
+        .section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #FFB6C1; /* Linha Rosa Suave */
+        }
+        
+        /* GALERIA DE SERVIÇOS (LAYOUT MAIS CLEAN) */
         .services-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+            gap: 30px; /* Mais espaço */
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .gallery-item {
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* Sombra mais espalhada */
             overflow: hidden;
-            width: calc(33% - 20px);
-            min-width: 300px;
-            text-align: left;
-            transition: transform 0.3s;
+            text-align: center;
+            transition: box-shadow 0.3s, transform 0.3s;
             cursor: pointer;
             text-decoration: none;
             color: #333;
         }
         
         .gallery-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px); /* Efeito sutil para cima */
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.15); /* Sombra rosa no hover */
         }
 
         .gallery-item img {
             width: 100%;
             height: 250px;
             object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05); /* Zoom sutil na imagem */
         }
 
         .gallery-content {
-            padding: 15px 20px;
+            padding: 20px 15px;
         }
 
         .gallery-content h4 {
             color: #FF69B4;
-            font-size: 1.3em;
-            margin-top: 0;
+            font-size: 1.4em;
             margin-bottom: 5px;
         }
         
-        /* Rodapé com Estilo */
+        /* SEÇÃO DE PROMOÇÃO COM BACKGROUND */
+        .promo-section {
+            background-color: #FFCCCC; /* Rosa Pastel Claro */
+            padding: 60px 5%;
+        }
+
+        /* ====================== RODAPÉ ====================== */
         footer {
             background-color: #333;
             color: #CCCCCC;
             text-align: center;
-            padding: 30px 5%;
-            margin-top: 50px;
+            padding: 40px 5%;
         }
 
-        footer a {
-            color: #FFB6C1;
-            text-decoration: none;
-            font-weight: 600;
+        /* ====================== MEDIA QUERIES (RESPONSIVIDADE) ====================== */
+        @media (max-width: 1024px) {
+            .services-gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+            }
         }
 
-        /* ************************************** */
-        /* *** AJUSTES PARA CELULAR (RESPONSIVO) *** */
-        /* ************************************** */
         @media (max-width: 768px) {
-            
-            /* 1. CABEÇALHO: Stack vertical */
+            /* 1. CABEÇALHO: Ajuste vertical e menu de rolagem */
             header {
                 flex-direction: column;
-                padding: 15px 2%;
+                padding: 10px 2%;
             }
-            
-            header .logo {
-                margin-bottom: 10px;
-            }
-
-            /* 2. NAVEGAÇÃO: Centralizada e Compacta */
             nav ul {
-                padding-top: 5px;
-                flex-wrap: nowrap;
                 overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
+                flex-wrap: nowrap;
                 justify-content: flex-start;
+                margin-top: 5px;
+                padding-bottom: 5px;
             }
-            
             nav ul li {
                 flex-shrink: 0;
-                margin: 0 10px;
+                margin: 0 8px;
             }
 
-            /* 3. HERO (Banner) */
+            /* 2. HERO */
             .hero {
-                height: 300px;
+                height: 400px;
             }
             .hero h2 {
-                font-size: 2em;
-            }
-            .hero p {
-                font-size: 1.2em;
+                font-size: 3em;
             }
 
-            /* 4. GALERIA DE SERVIÇOS */
+            /* 3. GALERIA (Celular) */
             .services-gallery {
-                flex-direction: column;
-                align-items: center;
+                grid-template-columns: 1fr; /* 1 coluna no celular (empilhamento) */
             }
             
-            .gallery-item {
-                width: 95%;
-                min-width: unset;
-            }
-            
-            .gallery-item img {
-                height: 200px;
-            }
-
-            /* 5. SEÇÕES GERAIS */
             .section {
-                padding: 30px 2%;
+                padding: 40px 3%;
             }
-            
         }
     </style>
 </head>
@@ -262,101 +247,98 @@
         <div class="logo">PERERECA FIT SALON</div>
         <nav>
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#promocao">Promoções</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="agendamento.html" class="btn-primary" style="margin: 0; padding: 5px 15px;">Agendar</a></li>
+                <li><a href="#inicio">INÍCIO</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="#promocao">PROMOÇÕES</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="agendamento.html" class="btn-primary" style="margin: 0; padding: 5px 15px; color: white;">AGENDAR</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="hero" id="inicio">
         <h2>Seu Estilo, Sua Energia!</h2>
-        <p>Transformação e bem-estar no único **Perereca Fit Salon**.</p>
-        <a href="#servicos" class="btn-primary">Ver Galeria de Serviços</a>
+        <p>A experiência de beleza que define o seu bem-estar. Reserve seu momento exclusivo.</p>
+        <a href="agendamento.html" class="btn-primary">Reserve Seu Horário Exclusivo</a>
     </div>
 
     <div class="section" id="servicos">
-        <h3>✨ Nossos Serviços em Destaque</h3>
+        <h3>Serviços de Luxo</h3>
         
         <div class="services-gallery">
             
             <a href="agendamento.html" class="gallery-item">
-                <img src="cabelo1.jpg" alt="Foto de Cabelo Moderno">
+                <img src="cabelo1.jpg" alt="Foto de Corte e Coloração">
                 <div class="gallery-content">
-                    <h4>Corte e Coloração</h4>
-                    <p>Técnicas modernas para o corte e coloração que realçam sua personalidade. Produtos naturais e de alta performance.</p>
+                    <h4>Corte & Coloração Signature</h4>
+                    <p>Técnicas modernas e produtos orgânicos para o máximo em saúde capilar e estilo duradouro.</p>
                 </div>
             </a>
             
             <a href="agendamento.html" class="gallery-item">
                 <img src="unha1.jpg" alt="Foto de Manicure e Unhas">
                 <div class="gallery-content">
-                    <h4>Manicure e Pedicure Fit</h4>
-                    <p>Unhas impecáveis, designs criativos e duradouros, com foco em esmaltes veganos e tratamentos fortalecedores.</p>
+                    <h4>Manicure Premium</h4>
+                    <p>Experiência de spa completa para mãos e pés, com esmaltes de luxo e acabamento impecável.</p>
                 </div>
             </a>
             
             <a href="agendamento.html" class="gallery-item">
-                <img src="sobrancelhas.jpg" alt="Foto de Sobrancelhas Perfeitas">
+                <img src="sobrancelhas.jpg" alt="Foto de Sobrancelhas">
                 <div class="gallery-content">
-                    <h4>Design de Sobrancelhas</h4>
-                    <p>Modelagem personalizada para harmonizar com seu rosto e técnicas avançadas como microblading para um olhar marcante.</p>
+                    <h4>Design de Sobrancelhas Master</h4>
+                    <p>Modelagem personalizada com técnicas de visagismo e preenchimento avançado para um olhar único.</p>
                 </div>
             </a>
             
             <a href="agendamento.html" class="gallery-item">
                 <img src="cabelo2.jpg" alt="Outra Foto de Penteado">
                 <div class="gallery-content">
-                    <h4>Penteados e Tratamentos</h4>
-                    <p>Hidratações profundas, reconstrução capilar e penteados para festas, formaturas e eventos especiais.</p>
+                    <h4>Tratamentos de Reconstrução</h4>
+                    <p>Foco na recuperação de fios danificados, garantindo brilho, força e maciez para todos os tipos de cabelo.</p>
                 </div>
             </a>
 
             <a href="agendamento.html" class="gallery-item">
                 <img src="unha2.jpg" alt="Outra Foto de Unhas">
                 <div class="gallery-content">
-                    <h4>Alongamento de Unhas</h4>
-                    <p>Gel, fibra ou acrílico. Garanta unhas longas e resistentes com acabamento profissional e natural.</p>
+                    <h4>Alongamento de Acrílico/Gel</h4>
+                    <p>Beleza e resistência máxima. Unhas longas e perfeitamente modeladas, sem perder o aspecto natural.</p>
                 </div>
             </a>
             
             <a href="agendamento.html" class="gallery-item">
                 <img src="sobran2.jpg" alt="Outra Foto de Sobrancelhas">
                 <div class="gallery-content">
-                    <h4>Micropigmentação e Henna</h4>
-                    <p>Soluções de preenchimento para falhas e definição da forma da sobrancelha, realçando a beleza natural dos seus olhos.</p>
+                    <h4>Micropigmentação Detalhada</h4>
+                    <p>Técnica de maquiagem semi-permanente para definir contornos e corrigir falhas com naturalidade.</p>
                 </div>
             </a>
 
         </div>
     </div>
 
-    <div class="section" id="promocao" style="background-color: #FFCCCC;"> 
-        <h3>💖 Super Promoção da Semana</h3>
-        <p style="font-size: 1.2em; font-weight: 600; color: #FF69B4;">
-            Na compra de um Corte + Tratamento Capilar, ganhe **50% de desconto** na Massagem Relaxante!
+    <div class="section promo-section" id="promocao"> 
+        <h3>Promoção da Semana</h3>
+        <p style="font-size: 1.3em; font-weight: 400; color: #555;">
+            Reserve seu horário e garanta **20% de desconto** no seu segundo serviço!
         </p>
-        <a href="agendamento.html" class="btn-primary">Aproveitar Oferta e Agendar!</a>
+        <a href="agendamento.html" class="btn-primary">Reserve Seu Horário Exclusivo</a>
     </div>
     
     <div class="section" id="contato">
-        <h3>📍 Onde Nos Encontrar</h3>
-        <p>Estamos prontos para te receber! Agende seu horário e venha nos visitar.</p>
+        <h3>Fale Conosco</h3>
         
-        <div style="margin-top: 30px; font-size: 1.1em;">
+        <div style="max-width: 600px; margin: 0 auto; font-size: 1.1em;">
             <p><strong>Endereço:</strong> Rua do Baile da Gaiola da Precheca, S/N</p>
-            <p><strong>Telefone para Contato:</strong> **4002-8922**</p>
+            <p><strong>Agendamento:</strong> Clique em "Agendar" ou em qualquer serviço acima.</p>
+            <p><strong>Telefone:</strong> **4002-8922**</p>
             <p><strong>Horário:</strong> Segunda a Sábado, das 9h às 19h</p>
-            <p style="margin-top: 20px;">Siga-nos nas redes sociais para ver nossos últimos trabalhos!</p>
         </div>
-        
-        </div>
+    </div>
     
     <footer>
-        <p>&copy; 2025 Perereca Fit Salon. Seu estilo, sua energia!</p>
-        <p>Desenvolvido com 💖 e muito estilo.</p>
+        <p>&copy; 2025 Perereca Fit Salon. Luxury & Wellness.</p>
     </footer>
 
 </body>
